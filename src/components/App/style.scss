@@ -1,0 +1,163 @@
+* {
+    padding: 0;
+    margin: 0;
+    border: 0;
+    font: inherit;
+    vertical-align: baseline;
+    box-sizing: border-box;
+}
+
+html {
+    height: 100%;
+}
+
+@keyframes resize {
+    0% {
+        background-size: 100% 100%;
+    }
+
+    50% {
+        background-size: 150% 150%;
+    }
+
+    100% {
+        background-size: 100% 100%;
+    }
+
+}
+
+body {
+    height: 100%;
+    overflow: hidden;
+    font-family: Helvetica, Arial, sans-serif;
+    color: #fff;
+    perspective: 1000px;
+    background-image: url('/images/grass.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    animation: resize infinite 400s linear;
+}
+
+h1 {
+    font-size: 2em;
+}
+
+.rotate {
+    animation: spin infinite 150s linear;
+}
+
+.book {
+    width: 300px;
+    height: 300px;
+    position: absolute;
+    left: 50%;
+    top: 35%;
+    transform: rotateX(60deg);
+    user-select: none;
+    transition: 500ms linear;
+}
+
+.page {
+    width: 300px;
+    height: 300px;
+    padding: 1em;
+    position: absolute;
+    left: 0;
+    top: 0;
+    text-indent: 2em;
+}
+
+.front {
+    background-color: #f396ad;
+}
+
+.back {
+    background-color: #fff;
+}
+
+.front-cover {
+    transform-origin: 0 50%;
+    transform: rotateY(0deg);
+    transition: 500ms linear;
+}
+
+.front-cover .back {
+    background-image: url('/images/mdn.png');
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    transform: translateZ(4px);
+}
+
+.back-cover .back {
+    transform: translateZ(-4px);
+}
+
+.p3d {
+    transform-style: preserve-3d;
+}
+
+.flip {
+    transform: rotateY(180deg);
+    border-right: 1px solid;
+}
+
+.dino,
+.shadow {
+    width: 196px;
+    height: 196px;
+    position: absolute;
+    left: 60px;
+    top: 60px;
+    transform-origin: 0 100%;
+    transition: 500ms linear;
+}
+
+.dino {
+    background: url('/images/dino.png') no-repeat;
+
+}
+
+.shadow {
+    background: url('/images/shadow.png') no-repeat;
+}
+
+
+@media only screen and (min-width:450px) and (max-width:768px) {
+    .book {
+        width: 250px;
+        height: 300px;
+        left: 50%;
+        top: 10%;
+    }
+
+    .page {
+        width: 250px;
+        height: 300px;
+    }
+
+    .dino,
+    .shadow {
+        width: 150px;
+        height: 150px;
+    }
+}
+
+@media only screen and (max-width: 449px) {
+    .book {
+        width: 220px;
+        height: 280px;
+        left: 22%;
+        top: 30%;
+    }
+
+    .page {
+        width: 220px;
+        height: 280px;
+    }
+
+    .dino,
+    .shadow {
+        width: 120px;
+        height: 120px;
+    }
+}
