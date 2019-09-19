@@ -44,7 +44,7 @@ export default () => {
     return (
         <div className="container" style={{ backgroundColor: dir && (serverIp === myIp) ? 'rgba(255, 255, 255, 0)' : 'rgba(0, 0, 50, 0.5)' }}>
             <img className="phone" src="/images/phone.png" />
-            {dir && (serverIp === myIp) ? '' : <img className="rain" src="/images/rain.gif" />}
+            {dir && (serverIp === myIp) ? <img className="animate" src="/images/celebrate.gif" /> : <img className="animate" src="/images/rain.gif" />}
             <div className="book p3d" style={{ transform: dir && (serverIp === myIp) ? 'rotateX(32.5deg)' : 'rotateX(60deg)' }}>
                 <div className="back-cover p3d">
                     <div className="page back flip" />
