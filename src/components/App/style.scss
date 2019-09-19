@@ -7,10 +7,6 @@
     box-sizing: border-box;
 }
 
-html {
-    height: 100%;
-}
-
 @keyframes in {
     0% {
         opacity: 0;
@@ -56,7 +52,6 @@ html {
 
 
 body {
-    height: 100%;
     overflow: hidden;
     font-family: Helvetica, Arial, sans-serif;
     color: #fff;
@@ -79,7 +74,7 @@ h1 {
 
 .phone {
     position: fixed;
-    width: 100px;
+    width: 90px;
     margin: 20px;
     animation: spin infinite 4s linear;
     z-index: 999;
