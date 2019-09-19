@@ -11,6 +11,17 @@ html {
     height: 100%;
 }
 
+@keyframes in {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+
+}
+
 @keyframes resize {
     0% {
         background-size: 100% 100%;
@@ -25,6 +36,24 @@ html {
     }
 
 }
+
+@keyframes spin {
+
+    0%,
+    75% {
+        transform: rotate(0deg);
+    }
+
+    50% {
+        transform: rotate(-90deg);
+    }
+
+    100% {
+        transform: rotate(0deg);
+    }
+
+}
+
 
 body {
     height: 100%;
@@ -42,8 +71,18 @@ h1 {
     font-size: 2em;
 }
 
-.rotate {
-    animation: spin infinite 150s linear;
+.container {
+    height: 100vh;
+    width: 100vw;
+    transition: background-color 1s linear;
+}
+
+.phone {
+    position: fixed;
+    width: 100px;
+    margin: 20px;
+    animation: spin infinite 4s linear;
+    z-index: 999;
 }
 
 .book {
@@ -65,6 +104,7 @@ h1 {
     left: 0;
     top: 0;
     text-indent: 2em;
+    border-right: 1px solid;
 }
 
 .front {
@@ -94,6 +134,7 @@ h1 {
 
 .p3d {
     transform-style: preserve-3d;
+    z-index: 999;
 }
 
 .flip {
@@ -121,6 +162,17 @@ h1 {
     background: url('/images/shadow.png') no-repeat;
 }
 
+.signature {
+    text-align: right;
+    font-family: 'Rock Salt', cursive;
+}
+
+.rain {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    animation: in linear 1s;
+}
 
 @media only screen and (min-width:450px) and (max-width:768px) {
     .book {
@@ -139,6 +191,11 @@ h1 {
     .shadow {
         width: 150px;
         height: 150px;
+    }
+
+    .phone {
+        width: 65px;
+        margin: 10px;
     }
 }
 
@@ -159,5 +216,10 @@ h1 {
     .shadow {
         width: 120px;
         height: 120px;
+    }
+
+    .phone {
+        width: 50px;
+        margin: 10px;
     }
 }

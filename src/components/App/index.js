@@ -35,19 +35,25 @@ export default () => {
     };
 
     return (
-        <div className="book p3d" style={{ transform: dir ? 'rotateX(37.5deg)' : 'rotateX(60deg)' }}>
-            <div className="back-cover p3d">
-                <div className="page back flip" />
-                <div className="page front p3d">
-                    <div className="shadow" style={{ transform: dir ? 'translateZ(1px) skewX(-22.5deg)' : 'translateZ(1px) skewX(0deg)', opacity: 0.4 }} />
-                    <div className="dino" style={{ transform: dir ? 'rotateX(-45deg)' : 'rotateX(0deg)' }} />
+        <div className="container" style={{backgroundColor: dir ? 'rgba(255, 255, 255, 0)' : 'rgba(0, 0, 50, 0.5)'}}>
+            <img className="phone" src="/images/phone.png" />
+            {!dir &&<img className="rain" src="/images/rain.gif" />}
+            <div className="book p3d" style={{ transform: dir ? 'rotateX(32.5deg)' : 'rotateX(60deg)' }}>
+                <div className="back-cover p3d">
+                    <div className="page back flip" />
+                    <div className="page front p3d">
+                        <div className="shadow" style={{ transform: dir ? 'translateZ(1px) skewX(-22.5deg)' : 'translateZ(1px) skewX(0deg)', opacity: 0.4 }} />
+                        <div className="dino" style={{ transform: dir ? 'rotateX(-45deg)' : 'rotateX(0deg)' }} />
+                    </div>
                 </div>
-            </div>
-            <div className="front-cover p3d" style={{ transform: dir ? 'rotateY(-180deg)' : 'rotateY(0deg)' }}>
-                <div className="page front flip p3d">
-                    <p>非常感謝 Vpon 給我這個機會，在9/17面談完並了解工作內容以及內部氣氛後，非常希望能加入 Vpon 與公司一起成長，期望在為公司解決問題之餘，同時成為組織內重要的成員。</p>
+                <div className="front-cover p3d" style={{ transform: dir ? 'rotateY(-180deg)' : 'rotateY(0deg)' }}>
+                    <div className="page front flip p3d">
+                        <p>非常感謝 Vpon 給我這個機會，在9/17面談完並了解工作內容以及公司內部氣氛後，非常希望能加入 Vpon 與公司及其他同事一起成長，期望在為公司解決問題之餘，同時成為組織內重要的成員。</p>
+                        <p>歡迎隨時與我聯絡！</p>
+                        <p className="signature">Jack Lin</p>
+                    </div>
+                    <div className="page back" />
                 </div>
-                <div className="page back" />
             </div>
         </div>
     )
