@@ -50,7 +50,7 @@ export default () => {
                     <div className="page back flip" />
                     <div className="page front p3d">
                         <div className="shadow" style={{ transform: dir && (serverIp === myIp) ? 'translateZ(1px) skewX(-22.5deg)' : 'translateZ(1px) skewX(0deg)', opacity: 0.4 }} />
-                        <div className="dino" style={{ transform: dir && (serverIp === myIp) ? 'rotateX(-45deg)' : 'rotateX(0deg)' }} />
+                        <div className="logo" style={{ transform: dir && (serverIp === myIp) ? 'rotateX(-45deg)' : 'rotateX(0deg)' }} />
                     </div>
                 </div>
                 <div className="front-cover p3d" style={{ transform: dir && (serverIp === myIp) ? 'rotateY(-180deg)' : 'rotateY(0deg)' }}>
