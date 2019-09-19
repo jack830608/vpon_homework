@@ -21,4 +21,4 @@ https://vpon.jack1in.com
 
 ### Instruction
 
-Pairing method：Connect to the same network（same Ip address）
+Pairing method：Desktop & Mobile connect to the same network（same Ip address）
